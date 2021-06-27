@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Weather Reporting Comparator Test Suite]">
+  <test thread-count="5" name="Weather Reporting Test(failed)">
+    <parameter name="city" value="Srinagar"/>
+    <classes>
+      <class name="com.qa.tests.WeatherAPITest">
+        <methods>
+          <include name="getWeatherDataByCityNameTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.qa.tests.WeatherAPITest -->
+    </classes>
+  </test> <!-- Weather Reporting Test(failed) -->
+</suite> <!-- Failed suite [Weather Reporting Comparator Test Suite] -->

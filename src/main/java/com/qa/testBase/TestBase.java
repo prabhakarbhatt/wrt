@@ -12,12 +12,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestBase {
 	
 	public static WebDriver driver;
-	static Properties prop;
+	public static Properties prop;
 	
 	public TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\Himanshu\\Documents\\WeatherReportingComparator\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\Himanshu\\Desktop\\git_test_fol\\WeatherReportingComparator\\src\\main\\java\\com\\qa\\config\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

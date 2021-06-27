@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Weather Reporting Comparator Test Suite" parallel="none">
+  <test name="Weather Reporting Test">
+      <parameter name="city" value="Srinagar"/>
+      <classes>
+      <!-- <class name="com.qa.tests.WeatherUiTest"/> -->
+      <class name="com.qa.tests.WeatherAPITest"/>
+      </classes>
+  </test> <!-- Test -->   
+</suite> <!-- Suite -->

@@ -1,5 +1,6 @@
 package com.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,14 +12,20 @@ public class HomePage extends TestBase {
 	@FindBy(id="h_sub_menu")
 	WebElement subMenu;
 	
-	@FindBy(linkText="https://social.ndtv.com/static/Weather/report/?pfrom=home-ndtv_topsubnavigation")
+	@FindBy(xpath="//a[text()='WEATHER']")
 	WebElement weatherNavOption;
+	
+	@FindBy(css="a[class='notnow']")
+	WebElement notNow;
 	
 	public HomePage() {		
 		PageFactory.initElements(driver, this);
 	}
 
 	public void clickTopNavigationSubMenu() {
+		if(driver.findElements(By.xpath("//div[@class='noti_wrap']")).size()>0) {
+			notNow.click();
+		}
 		subMenu.click();
 	}
 	
